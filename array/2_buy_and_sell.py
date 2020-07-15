@@ -4,14 +4,15 @@
 # Return value should be the most profit or 0 if you can't
 # make any.
 
-def countProfit(array):
+def countProfit(arr):
     if len(arr) == 1:
         return 0
-        
-    maxProfit = 0
 
-    for i in range(len(arr)-1):
-        diff = arr[i+1] -  arr[i]
+    maxProfit = 0
+    prev = arr[0]
+
+    for i in arr:
+        diff = i - prev
 
         if diff > 0:
             maxProfit += diff
