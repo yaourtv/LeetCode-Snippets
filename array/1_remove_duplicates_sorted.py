@@ -5,18 +5,16 @@
 # Return array and it's length
 
 def removeDuplicates(arr):
-	currentLength = len(arr)
-	if currentLength <= 1:
-		return
+    currentLength = len(arr)
+    if currentLength <= 1:
+        return
 
-	iterator = 0
-	while True:
-		if iterator >= currentLength - 1:
-			break
+    iterator = 0
+    while iterator >= currentLength:
 
-		if arr[iterator] == arr[iterator+1]:
-			arr.pop(iterator+1)
-			currentLength -= 1
-			iterator -= 1
+        if arr[iterator] == arr[iterator+1]:
+            arr.pop(iterator+1)
+            currentLength -= 1
+            iterator -= 1
 
-		iterator += 1
+        iterator += 1
